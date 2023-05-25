@@ -1,47 +1,29 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import FlatCards from './rishabhcomponents/FlatCards';
 
-
-
-
-function App(): JSX.Element {
- 
+import { StyleSheet, Text, useColorScheme, View } from 'react-native';
+const App = () => {
+  const colorScheme = useColorScheme();
   return (
-    <SafeAreaView >
-      <View>
-        <Text style={styles.centerText}>Rishabh Kumar </Text>
-      </View>
-      <View>
-        <FlatCards/>
-      </View>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text style={colorScheme == 'light' ? styles.textdark : styles.textwhite}> {colorScheme}</Text>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  centerText:{
-    textAlign:'center',
-    fontSize:25,
-    fontWeight:'bold',
-    color:'#793079'
-  }
-})
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textdark: {
+    color: 'black'
+  },
+  textwhite: {
+    color: 'white'
+  },
 
+});
 
 export default App;
