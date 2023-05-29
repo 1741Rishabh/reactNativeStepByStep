@@ -40,13 +40,13 @@ const styles = StyleSheet.create({
     },
     cardOne:{
         
-        backgroundColor:"red"
+        backgroundColor:"#FF4D4D"
     },
     cardTwo:{
-        backgroundColor:"green"
+        backgroundColor:"#87D47B"
     },
     cardThree:{
-        backgroundColor:"blue"
+        backgroundColor:"#8C7BD4"
     },
     textstyle:{
         marginLeft:3,

@@ -50,7 +50,8 @@ const styles = StyleSheet.create({
 ````
 export default App;
 ````
-![alt text](/projectImages/Project1.png)
+
+<img src="./projectImages/Project1.png" width=200  />
 
 # Project 2 start 
 
@@ -125,12 +126,52 @@ const styles = StyleSheet.create({
     }
 })
 ````
+
 ````
 export default FlatCards
 ````
-![alt text](/projectImages/Project2part1.png)
 
-#### 
+<img src="./projectImages/Project2part1.png" width=200  />
+
+## Lessons 5 (Design ElevatedCard)
+###  ScrollView vs FlatList
+`<ScrollView> vs <FlatList>` - which one to use?
+
+ScrollView renders all its react child components at once, but this has a performance downside.
+
+- In React Native, the ScrollView component is used to create a scrollable container that allows users to scroll through a list or content that exceeds the available screen space. It provides a way to handle scrolling of large amounts of data or content that cannot fit within a single screen.
+- ```` import { ScrollView } from 'react-native'; ````
+#### ScrollView properties:  horizontal,
+- contentContainerStyle: Allows you to style the container of the content inside the ScrollView.
+- horizontal: Set this prop to true if you want horizontal scrolling instead of vertical scrolling.
+- scrollEnabled: Set this prop to false to disable scrolling.
+- onScroll: A callback function that gets called when the scroll position changes.
+- keyboardShouldPersistTaps: Determines whether the keyboard should stay open when tapping inside the ScrollView.
+Other common properties like style, contentInset, contentOffset, etc., can be applied to customize the ScrollView.
+
+<img src="./projectImages/Project2part2.png" width=200  />
+
+
+
+
+
+
+
+
+
+
+# Style in react-native 
+To get box shadow for both platforms, use both sets of style props:
+````
+boxWithShadow: {
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,  
+    elevation: 5
+}
+````
+
 
 
 
