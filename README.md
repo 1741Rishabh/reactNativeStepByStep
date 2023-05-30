@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
 export default App;
 ````
 
-<img src="./projectImages/Project1.png" width=200  />
+<img src="./projectImages/Project1.png" width=150  />
 
 # Project 2 start 
 
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
 export default FlatCards
 ````
 
-<img src="./projectImages/Project2part1.png" width=200  />
+<img src="./projectImages/Project2part1.png" width=150  />
 
 ## Lessons 5 (Design ElevatedCard)
 ###  ScrollView vs FlatList
@@ -149,10 +149,19 @@ ScrollView renders all its react child components at once, but this has a perfor
 - keyboardShouldPersistTaps: Determines whether the keyboard should stay open when tapping inside the ScrollView.
 Other common properties like style, contentInset, contentOffset, etc., can be applied to customize the ScrollView.
 
-<img src="./projectImages/Project2part2.png" width=200  />
+<img src="./projectImages/Project2part2.png" width=150  />
 
 
+## Lessons 6 (Guide to Images in React Native)
+The image name is resolved the same way JS modules are resolved.
+### Static Image Resources
+- `<Image source={require('./my-icon.png')} />;`
+- `var icon = this.props.active
+  ? require('./my-icon-active.png') : require('./my-icon-inactive.png');`
+<Image source={icon} />;
+### Network Images
 
+- `<Image source={{uri: 'https://reactjs.org/logo-og.png'}} style={{width: 400, height: 400}} />`
 
 
 
@@ -171,8 +180,64 @@ boxWithShadow: {
     elevation: 5
 }
 ````
+````
+Flexbox
+- Understanding Flexbox Terminology:
+- Flex Container: The parent component that applies Flexbox layout properties to its children.
+- Flex Items: The child components inside the flex container that are laid out using Flexbox.
+````
+````
+# Applying Flexbox to a Container
+- style={{ flex: 1 }}
+````
+````
+Flex Direction:
 
+The flexDirection property determines the direction in which flex items are laid out within the flex container. It can have one of the following values:
 
+- row: Flex items are arranged horizontally (default).
+- column: Flex items are arranged vertically.
+- row-reverse: Flex items are arranged horizontally in reverse order.
+- column-reverse: Flex items are arranged vertically in reverse order.
+
+<View style={{ flex: 1, flexDirection: 'row' }}>
+  {/* Flex items go here */}
+</View>
+````
+````
+Justify Content:
+
+The justifyContent property determines how flex items are positioned along the main axis (defined by flexDirection) within the flex container. It can have the following values:
+
+- flex-start: Flex items are positioned at the beginning of the container (default).
+- flex-end: Flex items are positioned at the end of the container.
+- center: Flex items are centered within the container.
+- space-between: Flex items are evenly distributed with equal spacing between them.
+- space-around: Flex items are evenly distributed with equal spacing around them.
+````
+````
+Align Items:
+The alignItems property determines how flex items are positioned along the cross axis (perpendicular to the main axis) within the flex container. It can have the following values:
+
+- flex-start: Flex items are aligned at the start of the container.
+- flex-end: Flex items are aligned at the end of the container.
+- center: Flex items are centered within the container.
+- stretch: Flex items are stretched to fill the container.
+- baseline: Flex items are aligned based on their baseline.
+
+<View style={{ flex: 1, alignItems: 'center' }}>
+  {/* Flex items go here */}
+</View>
+````
+````
+Flex Item Properties:
+Each flex item can have its own properties to control its behavior within the flex container. Some commonly used properties include:
+- flex: Determines how the item grows or shrinks relative to other items. Higher values indicate more growth or shrinkage.
+- alignSelf: Overrides the alignItems value for an individual item.
+- flexBasis: Sets the initial size of the item before any remaining space is distributed.
+- flexGrow: Specifies how much the item can grow if there's available space.
+- flexShrink: Specifies how much the item can shrink if there's a
+````
 
 
 
